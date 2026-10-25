@@ -1,0 +1,94 @@
+# Steam Wishlist: a headless service reads a public Steam wishlist
+# (IWishlistService) and its prices for one store region (IStoreBrowseService,
+# no API key), keeps a price history, downloads the cover art and notifies
+# about new discounts and price alerts. Bar widget, panel and desktop widget
+# are thin clients of what it publishes through noctalia.state.
+#
+# IPC -> noctalia msg plugin sergiiosy/wishlist:service all refresh
+
+id = "sergiiosy/wishlist"
+name = "Steam Wishlist"
+version = "1.0.0"
+plugin_api = 33
+author = "sergiiosy"
+license = "MIT"
+icon = "brand-steam"
+description = "Discounts on the games of your Steam wishlist, with prices for your region, price alerts and covers."
+tags = ["steam", "games", "wishlist", "deals"]
+dependencies = ["xdg-open"]
+
+[[setting]]
+key = "profile"
+type = "string"
+label_key = "settings.profile.label"
+description_key = "settings.profile.description"
+default = ""
+
+[[setting]]
+key = "country"
+type = "select"
+label_key = "settings.country.label"
+description_key = "settings.country.description"
+default = "UA"
+options = [
+  { value = "UA", label_key = "country.UA" },
+  { value = "IT", label_key = "country.IT" },
+  { value = "PL", label_key = "country.PL" },
+  { value = "DE", label_key = "country.DE" },
+  { value = "US", label_key = "country.US" },
+  { value = "GB", label_key = "country.GB" },
+]
+
+[[setting]]
+key = "refresh_hours"
+type = "int"
+label_key = "settings.refresh_hours.label"
+description_key = "settings.refresh_hours.description"
+default = 6
+min = 1
+max = 48
+
+[[setting]]
+key = "notify"
+type = "bool"
+label_key = "settings.notify.label"
+description_key = "settings.notify.description"
+default = true
+
+[[setting]]
+key = "min_discount"
+type = "int"
+label_key = "settings.min_discount.label"
+description_key = "settings.min_discount.description"
+default = 0
+min = 0
+max = 95
+visible_when = { key = "notify", values = ["true"] }
+
+[[service]]
+id = "service"
+entry = "service.luau"
+
+[[widget]]
+id = "bar"
+entry = "bar.luau"
+
+  [[widget.setting]]
+  key = "show_count"
+  type = "bool"
+  label_key = "settings.show_count.label"
+  default = true
+
+[[panel]]
+id = "panel"
+entry = "panel.luau"
+width = 440
+height = 720
+placement = "attached"
+position = "auto"
+open_near_click = true
+
+# The best current deals with their covers.
+[[desktop_widget]]
+id = "deals"
+entry = "desktop.luau"

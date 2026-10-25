@@ -1,0 +1,15 @@
+# Catalog of this Noctalia plugin source: one [[plugin]] row per plugin
+# directory. Keep it in sync with each plugin.toml (id, version, plugin_api).
+
+[[plugin]]
+id           = "sergiiosy/wishlist"
+name         = "Steam Wishlist"
+version      = "1.0.0"
+author       = "sergiiosy"
+license      = "MIT"
+icon         = "brand-steam"
+description  = "Discounts on the games of your Steam wishlist, with prices for your region, price alerts and covers."
+deprecated   = false
+plugin_api   = 33
+tags         = ["steam", "games", "wishlist", "deals"]
+dependencies = ["xdg-open"]

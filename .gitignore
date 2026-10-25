@@ -1,0 +1,6 @@
+# Editor and OS leftovers
+*.swp
+*~
+.DS_Store
+# luau-lsp definitions, downloaded locally
+noctalia.d.luau
