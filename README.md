@@ -1,45 +1,81 @@
-# Noctalia plugins
+<div align="center">
 
-Plugins for the [Noctalia](https://noctalia.dev) shell.
+# 🧩 Noctalia plugins
 
-[![Donate](https://img.shields.io/badge/Donate-monobank-000000)](https://send.monobank.ua/jar/6L3skCLzFG)
+Little plugins I made for my own [Noctalia](https://noctalia.dev) desktop.<br>
+Maybe they'll make yours a bit nicer too.
 
-| Plugin | Id | What it does |
-|---|---|---|
-| [Steam Wishlist](wishlist/) | `sergiiosy/wishlist` | Discounts on the games of your Steam wishlist, with prices for your region, price alerts and covers. |
+![Noctalia 5.3+](https://img.shields.io/badge/Noctalia-5.3%2B-7c6af7)
+[![MIT](https://img.shields.io/badge/license-MIT-2ea44f)](LICENSE)
+[![Buy me a coffee](https://img.shields.io/badge/buy_me_a_coffee-monobank-000000?logo=buymeacoffee&logoColor=white)](https://send.monobank.ua/jar/6L3skCLzFG)
 
-<img src="wishlist/screenshot.png" alt="Steam Wishlist panel" width="360">
+</div>
 
-## Install
+## 🎮 Steam Wishlist
 
-Add this repository as a plugin source, then enable the plugin:
+<table>
+<tr>
+<td width="50%"><img src="wishlist/screenshot.png" alt="Steam Wishlist panel"></td>
+<td>
+
+**Never miss a sale on the games you're waiting for.**
+
+A little Steam icon in your bar tells you how many games of your wishlist are on sale
+right now, with the real prices of your own store region.
+
+- 🏷️ discounts with covers, just like on Steam
+- 🔔 a ping when a game drops below *your* price
+- 🖥️ an optional desktop widget with the best deals
+- 🔒 no login, no API key: just a public wishlist
+
+[Read more →](wishlist/)
+
+</td>
+</tr>
+</table>
+
+*More plugins are on the way! 🚧*
+
+## 🚀 Get started
+
+Two commands and you're done:
 
 ```sh
 noctalia msg plugins source add sergiiosy git https://github.com/sergiiosy/noctalia-plugins
 noctalia msg plugins enable sergiiosy/wishlist
 ```
 
-The plugin then shows up in **Settings → Plugins**, and updates arrive with
-`noctalia msg plugins update`.
+Then open **Settings → Plugins**, paste your Steam profile link, and enjoy. 🎉
 
-To remove it:
+<details>
+<summary><b>Updating or removing</b></summary>
 
 ```sh
+# get the latest version
+noctalia msg plugins update
+
+# remove everything
 noctalia msg plugins disable sergiiosy/wishlist
 noctalia msg plugins source remove sergiiosy
 ```
 
-## Requirements
+</details>
 
-Noctalia 5.3 or newer (plugin API 33).
+## 💬 Ideas or problems?
 
-## Support
+Something doesn't work, or you'd love a new feature?
+[Open an issue](https://github.com/sergiiosy/noctalia-plugins/issues): I read every single one.
 
-If a plugin is useful to you, you can buy me a coffee through a
-[monobank jar](https://send.monobank.ua/jar/6L3skCLzFG). Any Visa or Mastercard works, from any
-country, as do Apple Pay and Google Pay. The amount is in Ukrainian hryvnias and your bank
-converts it.
+## ☕ Say thanks
 
-## License
+These plugins are free and always will be. If one of them made your day a little better,
+you can [buy me a coffee](https://send.monobank.ua/jar/6L3skCLzFG). 💛
 
-MIT, see [LICENSE](LICENSE).
+> Any card from any country works, as do Apple Pay and Google Pay.
+> The amount is in Ukrainian hryvnias and your bank converts it for you.
+
+<div align="center">
+
+Made with ❤️ in Ukraine 🇺🇦 · [MIT License](LICENSE)
+
+</div>
