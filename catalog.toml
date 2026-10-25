@@ -13,3 +13,16 @@ deprecated   = false
 plugin_api   = 33
 tags         = ["steam", "games", "wishlist", "deals"]
 dependencies = ["xdg-open"]
+
+[[plugin]]
+id           = "sergiiosy/parcels"
+name         = "Parcels"
+version      = "1.0.0"
+author       = "sergiiosy"
+license      = "MIT"
+icon         = "package"
+description  = "Track Nova Poshta, Ukrposhta and China shipments from the bar and the desktop."
+deprecated   = false
+plugin_api   = 33
+tags         = ["tracking", "shipping", "utility"]
+dependencies = ["fc-list"]

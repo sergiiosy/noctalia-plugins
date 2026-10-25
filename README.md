@@ -34,18 +34,47 @@ right now, with the real prices of your own store region.
 </tr>
 </table>
 
+## 📦 Parcels
+
+<table>
+<tr>
+<td width="50%"><img src="parcels/screenshot.png" alt="Parcels panel"></td>
+<td>
+
+**Know where your parcels are without opening a single app.**
+
+A parcel icon in your bar counts what's on its way, turns orange when something is waiting
+for you at the branch, and pings you whenever a parcel moves.
+
+- 🇺🇦 Nova Poshta out of the box, no key needed
+- 🌍 Ukrposhta, China Post, Cainiao and many more with a free 17TRACK key
+- 🗺️ a 5-step progress bar and the full event history
+- 🖥️ two desktop widgets, including a tile with the most urgent parcel
+
+[Read more →](parcels/)
+
+</td>
+</tr>
+</table>
+
 *More plugins are on the way! 🚧*
 
 ## 🚀 Get started
 
-Two commands and you're done:
+Add this repository once:
 
 ```sh
 noctalia msg plugins source add sergiiosy git https://github.com/sergiiosy/noctalia-plugins
-noctalia msg plugins enable sergiiosy/wishlist
 ```
 
-Then open **Settings → Plugins**, paste your Steam profile link, and enjoy. 🎉
+Then enable the plugins you like:
+
+```sh
+noctalia msg plugins enable sergiiosy/wishlist
+noctalia msg plugins enable sergiiosy/parcels
+```
+
+Open **Settings → Plugins** to set them up, and enjoy. 🎉
 
 <details>
 <summary><b>Updating or removing</b></summary>
@@ -54,8 +83,12 @@ Then open **Settings → Plugins**, paste your Steam profile link, and enjoy. �
 # get the latest version
 noctalia msg plugins update
 
+# remove a plugin
+noctalia msg plugins disable sergiiosy/parcels
+
 # remove everything
 noctalia msg plugins disable sergiiosy/wishlist
+noctalia msg plugins disable sergiiosy/parcels
 noctalia msg plugins source remove sergiiosy
 ```
 

@@ -1,0 +1,95 @@
+# Parcel tracker: a headless service polls Nova Poshta (no key needed) and
+# 17TRACK (Ukrposhta, China Post, Cainiao, ... - needs a free API key) and
+# publishes the parcel list through noctalia.state. The bar widget, panel and
+# desktop widget are thin clients of that list.
+#
+# IPC -> noctalia msg plugin sergiiosy/parcels:service all add <number> [label]
+#        noctalia msg plugin sergiiosy/parcels:service all remove <number>
+#        noctalia msg plugin sergiiosy/parcels:service all refresh
+
+id = "sergiiosy/parcels"
+name = "Parcels"
+version = "1.0.0"
+plugin_api = 33
+author = "sergiiosy"
+license = "MIT"
+icon = "package"
+description = "Track Nova Poshta, Ukrposhta and China shipments from the bar and the desktop."
+tags = ["tracking", "shipping", "utility"]
+dependencies = ["fc-list"]
+
+[[setting]]
+key = "track17_key"
+type = "string"
+label_key = "settings.track17_key.label"
+description_key = "settings.track17_key.description"
+default = ""
+
+[[setting]]
+key = "np_phone"
+type = "string"
+label_key = "settings.np_phone.label"
+description_key = "settings.np_phone.description"
+default = ""
+
+[[setting]]
+key = "refresh_minutes"
+type = "int"
+label_key = "settings.refresh_minutes.label"
+description_key = "settings.refresh_minutes.description"
+default = 30
+min = 5
+max = 720
+
+[[setting]]
+key = "notify"
+type = "bool"
+label_key = "settings.notify.label"
+description_key = "settings.notify.description"
+default = true
+
+[[service]]
+id = "service"
+entry = "service.luau"
+
+[[widget]]
+id = "bar"
+entry = "bar.luau"
+
+  [[widget.setting]]
+  key = "show_count"
+  type = "bool"
+  label_key = "settings.show_count.label"
+  default = true
+
+[[panel]]
+id = "panel"
+entry = "panel.luau"
+width = 440
+height = 680
+placement = "attached"
+position = "auto"
+open_near_click = true
+
+[[desktop_widget]]
+id = "desktop"
+entry = "desktop.luau"
+
+  [[desktop_widget.setting]]
+  key = "max_items"
+  type = "int"
+  label_key = "settings.max_items.label"
+  default = 6
+  min = 1
+  max = 20
+
+  [[desktop_widget.setting]]
+  key = "show_delivered"
+  type = "bool"
+  label_key = "settings.show_delivered.label"
+  default = true
+
+# Small square tile with the most urgent parcel (pickup first).
+[[desktop_widget]]
+id = "next"
+entry = "next.luau"
