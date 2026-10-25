@@ -6,6 +6,8 @@ Plugins for the [Noctalia](https://noctalia.dev) shell.
 |---|---|---|
 | [Steam Wishlist](wishlist/) | `sergiiosy/wishlist` | Discounts on the games of your Steam wishlist, with prices for your region, price alerts and covers. |
 
+<img src="wishlist/screenshot.png" alt="Steam Wishlist panel" width="360">
+
 ## Install
 
 Add this repository as a plugin source, then enable the plugin:

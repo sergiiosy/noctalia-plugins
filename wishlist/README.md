@@ -4,6 +4,8 @@ See which games of your Steam wishlist are on sale, with the prices of your own 
 region, right from the Noctalia bar. No API key and no login: it only needs your wishlist
 to be public.
 
+![The panel: wishlist games on sale with their covers, discount and price](screenshot.png)
+
 | Plugin | |
 |---|---|
 | Id | `sergiiosy/wishlist` |
