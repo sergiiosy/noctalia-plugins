@@ -1,4 +1,4 @@
-# sergiiosy's Noctalia plugins
+# Noctalia plugins
 
 Plugins for the [Noctalia](https://noctalia.dev) shell.
 
