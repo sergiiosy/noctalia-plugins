@@ -2,8 +2,7 @@
 
 # 🧩 Noctalia plugins
 
-Little plugins I made for my own [Noctalia](https://noctalia.dev) desktop.<br>
-Maybe they'll make yours a bit nicer too.
+Little plugins [Noctalia](https://noctalia.dev) desktop.<br>
 
 ![Noctalia 5.3+](https://img.shields.io/badge/Noctalia-5.3%2B-7c6af7)
 [![MIT](https://img.shields.io/badge/license-MIT-2ea44f)](LICENSE)
